@@ -1,11 +1,24 @@
 import '../views/App.scss';
+import React, { Component } from 'react'
+import Example from './Example';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>ok</h1>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Example></Example>
+      </div>
+    )
+  }
 }
 
-export default App;
+// function component
+//  const App=()=> {
+//   return (
+//     <div className="App">
+//      <button onClick={}> Click me</button>
+//     </div>
+//   );
+// }
+
+// export default App;
