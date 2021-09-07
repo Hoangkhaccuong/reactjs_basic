@@ -2,39 +2,46 @@ import React, { Component } from 'react'
 
 
 export default class Example extends Component {
-  state={
-    name:'Ci',
-    age:18,
-    add:'QB'        
-  }
 // handleOnInput =(event)=>{
 //     this.setState({
 //       name:event.target.value
 //     })
 // }
-handleSsubmit=()=>{
-  alert('sumbit')
+state=({
+  username:"",
+  password:""
+})
+handleInputForm=(e)=>{
+      this.setState({
+        username:e.target.value,
+      })
+  console.log(`UserName: ${e.target.value}`)
 }
-handleOnChangeInput=(e)=>{
+handleInputPassword=(e)=>{
   this.setState({
-    name:e.target.value,
-    age:11,
-    add:"QN",
-    
+    password:e.target.value,
   })
-  console.log(e.target.value ,'event',e.target ,e,'')
+console.log(`Password: ${e.target.value}`)
+}
+displayInfor=(e)=>{
+  e.preventDefault()
+  console.log('Output data:', this.state)
 }
     render() {
-        const age=17
-        console.log('hoc vs react ', this.state)
+      
         return (
-          
-           <>
-           <div>
-             <h1>Login {this.state['name']} </h1>
-             <input type='text' value={this.name} onChange={(e)=>this.handleOnChangeInput(e)}></input>
-              <button onClick={()=>this.handleSsubmit()}>Submit</button>
-           </div>
+             <>
+             <form method="">
+               <div>
+               <label>User Name</label>
+               <input type="text" value={this.state.username} onChange={(e)=>this.handleInputForm(e)}></input>
+               </div>
+               <div>
+               <label>Password</label>
+               <input type="password" value={this.state.password} onChange={(e)=>this.handleInputPassword(e)}></input> 
+               </div>
+               <button onClick={(e)=>this.displayInfor(e)}>Submit</button>
+             </form>
             </>
         )
     }
