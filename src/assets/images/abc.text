@@ -1,0 +1,2 @@
+                    chen anh
+                 <img src={require('../assets/images/1.jpg').default}/>

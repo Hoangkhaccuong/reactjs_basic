@@ -27,8 +27,10 @@ displayInfor=(e)=>{
   e.preventDefault()
   console.log('Output data:', this.state)
 }
+
+
+        
     render() {
-      
         return (
              <>
              <form method="">
@@ -41,8 +43,8 @@ displayInfor=(e)=>{
                <input type="password" value={this.state.password} onChange={(e)=>this.handleInputPassword(e)}></input> 
                </div>
                <button onClick={(e)=>this.displayInfor(e)}>Submit</button>
-             </form>
+             </form >
             </>
         )
-    }
+    } 
 }
