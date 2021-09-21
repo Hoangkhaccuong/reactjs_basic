@@ -10,6 +10,7 @@ import {
 BrowserRouter as Router,Switch,Route,Link, BrowserRouter
 } from "react-router-dom";
 import Childcomponent from './Example/Childcomponent';
+import ListUser from './Users/ListUser';
 
  class App extends Component {
   render() {    
@@ -18,9 +19,11 @@ import Childcomponent from './Example/Childcomponent';
       <BrowserRouter>
       <>
        <Navbar/>
-     
       <div >
       <Switch>
+      <Route path="/list-user">
+            <ListUser />
+          </Route>
           <Route path="/about">
             <Showhide />
           </Route>

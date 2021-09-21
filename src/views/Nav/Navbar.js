@@ -18,6 +18,9 @@ class Navbar extends Component {
                     <NavLink to="/about" activeClassName="active">
                         About
                     </NavLink>
+                    <NavLink to="/list-user" activeClassName="active">
+                        List User
+                    </NavLink>
                 </div>
             </>
 
